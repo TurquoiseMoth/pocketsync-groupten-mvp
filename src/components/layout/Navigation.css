@@ -59,6 +59,7 @@
 .nav-icon {
   font-size: 1.25rem;
   margin-bottom: 0.1rem;
+  filter: brightness(0) saturate(100%) invert(18%) sepia(67%) saturate(3579%) hue-rotate(252deg) brightness(87%) contrast(95%);
 }
 
 .nav-text {
@@ -68,6 +69,10 @@
 .nav-link.active {
   color: var(--primary-blue);
   font-weight: 600;
+}
+
+.nav-link.active .nav-icon {
+  filter: brightness(0) invert(1);
 }
 
 /* ── Desktop: Left Sidebar ────────────────────────────────── */
@@ -95,7 +100,8 @@
   .nav-brand {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    justify-content: center;
+    gap: 0.625rem;
     font-size: 1.25rem;
     font-weight: 700;
     color: var(--text-primary);
@@ -103,7 +109,9 @@
   }
 
   .brand-icon {
-    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    line-height: 0;
   }
 
   /* Container holds nav-group and stretches */
@@ -145,6 +153,7 @@
     font-size: 1.1rem;
     margin-bottom: 0;
     flex-shrink: 0;
+    filter: brightness(0) saturate(100%) invert(18%) sepia(67%) saturate(3579%) hue-rotate(252deg) brightness(87%) contrast(95%);
   }
 
   .nav-link:hover {
@@ -160,9 +169,12 @@
     border-color: transparent;
   }
 
-  .nav-link.active .nav-text,
-  .nav-link.active .nav-icon {
+  .nav-link.active .nav-text {
     color: #ffffff;
+  }
+
+  .nav-link.active .nav-icon {
+    filter: brightness(0) invert(1);
   }
 
 
