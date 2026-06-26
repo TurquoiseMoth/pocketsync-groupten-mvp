@@ -1,6 +1,6 @@
 import './accounts-row.css';
 
-export interface BankAccount {
+interface BankAccount {
   id: string;
   bankName: string;
   maskAccount: string;

@@ -46,7 +46,7 @@
   min-width: 18px;
   height: 18px;
   padding: 0 4px;
-  border-radius: 10px;
+  border-radius: var(--radius-lg);
   display: flex;
   align-items: center;
   justify-content: center;

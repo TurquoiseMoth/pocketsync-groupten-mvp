@@ -63,6 +63,20 @@
   --var-110: 48px;
   --var-120: 50px;
 
+  /* Border radius scale */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 10px;
+  --radius-xl: 12px;
+  --radius-2xl: 14px;
+  --radius-3xl: 16px;
+  --radius-full: 20px;
+
+  /* Shadow scale */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 2px 4px rgba(0, 0, 0, 0.02);
+  --shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.06);
+
   /* Typography scale */
   --h1: 64px;
   --h2: 60px;

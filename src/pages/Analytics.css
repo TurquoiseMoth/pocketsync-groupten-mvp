@@ -1,7 +1,13 @@
 .analytics-container {
-  padding: 1.5rem;
+  padding: 1rem;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .analytics-container {
+    padding: 1.5rem;
+  }
 }
 
 .analytics-header {
@@ -30,9 +36,9 @@
 .summary-card {
   background-color: var(--bg-surface);
   border: 1px solid var(--border-color);
-  border-radius: 12px;
+  border-radius: var(--radius-xl);
   padding: 1.25rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+  box-shadow: var(--shadow-md);
 }
 
 .summary-card .summary-label {
@@ -82,6 +88,12 @@
   height: 300px;
 }
 
+@media (max-width: 480px) {
+  .chart-wrapper {
+    height: 220px;
+  }
+}
+
 .analytics-breakdown {
   margin-bottom: 2rem;
 }
@@ -105,7 +117,7 @@
   gap: 1rem;
   background-color: var(--bg-surface);
   border: 1px solid var(--border-color);
-  border-radius: 10px;
+  border-radius: var(--radius-lg);
   padding: 1rem;
 }
 

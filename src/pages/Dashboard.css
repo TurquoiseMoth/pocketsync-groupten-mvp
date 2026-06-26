@@ -54,11 +54,7 @@
   font-size: 0.875rem;
   color: var(--primary-blue);
   font-weight: 500;
-  text-decoration: none;
   white-space: nowrap;
-  line-height: 1.5;
-  display: inline-flex;
-  align-items: center;
 }
 
 /* Quick Actions */
@@ -77,8 +73,8 @@
 
 .action-card {
   background-color: var(--bg-surface);
-  border: 1px solid #C3C3C3;
-  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
   padding: 1.25rem 0.5rem;
   display: flex;
   flex-direction: column;
@@ -86,12 +82,12 @@
   text-align: center;
   cursor: pointer;
   transition: all 0.2s;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+  box-shadow: var(--shadow-md);
 }
 
 .action-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  box-shadow: var(--shadow-lg);
 }
 
 .action-icon {
@@ -130,7 +126,7 @@
 .transactions-card {
   background-color: var(--bg-surface);
   border: 1px solid var(--border-color);
-  border-radius: 12px;
+  border-radius: var(--radius-xl);
   padding: 1rem;
 }
 
@@ -207,8 +203,8 @@
 
 .spending-card {
   background-color: var(--bg-surface);
-  border: 1px solid #C3C3C3;
-  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
   padding: 1rem;
 }
 
@@ -297,11 +293,9 @@
 
 .recommendation-card {
   background: linear-gradient(135deg, #3b0f8f 0%, #4c1aac 60%, #5a22c0 100%);
-  border-radius: 14px;
+  border-radius: var(--radius-2xl);
   padding: 1.25rem 1.25rem 1rem;
   color: #ffffff;
-  position: relative;
-  overflow: hidden;
 }
 
 .recommendation-card h3 {

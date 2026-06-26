@@ -1,7 +1,13 @@
 .settings-container {
-  padding: 1.5rem;
-  max-width: 900px;
+  padding: 1rem;
+  max-width: 1200px;
   margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .settings-container {
+    padding: 1.5rem;
+  }
 }
 
 .settings-header {
@@ -23,7 +29,7 @@
 .settings-section {
   background-color: var(--bg-surface);
   border: 1px solid var(--border-color);
-  border-radius: 12px;
+  border-radius: var(--radius-xl);
   margin-bottom: 1.5rem;
   overflow: hidden;
 }

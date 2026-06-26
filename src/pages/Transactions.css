@@ -1,7 +1,13 @@
 .transactions-container {
-  padding: 1.5rem;
+  padding: 1rem;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .transactions-container {
+    padding: 1.5rem;
+  }
 }
 
 .transactions-header {
@@ -31,7 +37,7 @@
 .filter-btn {
   padding: 0.5rem 1rem;
   border: 1px solid var(--border-color);
-  border-radius: 20px;
+  border-radius: var(--radius-full);
   background-color: var(--bg-surface);
   color: var(--text-secondary);
   font-size: 0.8125rem;
@@ -60,7 +66,7 @@
   width: 100%;
   padding: 0.75rem 1rem 0.75rem 2.5rem;
   border: 1px solid var(--border-color);
-  border-radius: 10px;
+  border-radius: var(--radius-lg);
   font-size: 0.875rem;
   font-family: var(--font-family-base);
   background-color: var(--bg-surface);
@@ -98,14 +104,14 @@
   align-items: center;
   padding: 1rem;
   background-color: var(--bg-surface);
-  border: 1px solid #C3C3C3;
-  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
   gap: 1rem;
   transition: box-shadow 0.2s;
 }
 
 .transaction-row:hover {
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  box-shadow: var(--shadow-lg);
 }
 
 .tx-badge {
