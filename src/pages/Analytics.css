@@ -82,6 +82,12 @@
   height: 300px;
 }
 
+@media (max-width: 480px) {
+  .chart-wrapper {
+    height: 220px;
+  }
+}
+
 .analytics-breakdown {
   margin-bottom: 2rem;
 }

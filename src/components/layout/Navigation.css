@@ -33,6 +33,18 @@
   justify-content: space-around;
 }
 
+@media (max-width: 480px) {
+  .nav-links-container,
+  .nav-group {
+    gap: 0.25rem;
+  }
+
+  .nav-link {
+    padding: var(--var-10) 0.375rem;
+    font-size: 0.6875rem;
+  }
+}
+
 .nav-link {
   display: flex;
   flex-direction: column;
