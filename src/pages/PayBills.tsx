@@ -1,6 +1,10 @@
 import { useState, useEffect } from 'react';
 import './PayBills.css';
-import lightningSvg from '../assets/icons/lightning.svg';
+import electricitySvg from '../assets/icons/electricity.svg';
+import internetSvg from '../assets/icons/internet.svg';
+import airtimeSvg from '../assets/icons/airtime.svg';
+import subscriptionSvg from '../assets/icons/subscription.svg';
+import transferSvg from '../assets/icons/transfer.svg';
 import { budgetService } from '../services';
 import type { BillCategory, Bill } from '../types';
 
@@ -43,15 +47,26 @@ const PayBills = () => {
           <div key={cat.name} className="bill-category-card">
             <div className="bill-cat-icon">
               {cat.name === 'Electricity' ? (
-                <img src={lightningSvg} alt="" width="24" height="24" />
+                <img src={electricitySvg} alt="" width="24" height="24" />
+              ) : cat.name === 'Internet' ? (
+                <img src={internetSvg} alt="" width="50" height="50" />
+              ) : cat.name === 'Airtime' ? (
+                <img src={airtimeSvg} alt="" width="50" height="50" />
+              ) : cat.name === 'TV Subscription' ? (
+                <img src={subscriptionSvg} alt="" width="24" height="24" />
               ) : (
                 cat.icon
               )}
             </div>
             <p className="bill-cat-name">{cat.name}</p>
-            <p className="bill-cat-count">{cat.count} bill{cat.count > 1 ? 's' : ''}</p>
           </div>
         ))}
+        <div className="bill-category-card">
+          <div className="bill-cat-icon">
+            <img src={transferSvg} alt="" width="24" height="24" />
+          </div>
+          <p className="bill-cat-name">Transfer</p>
+        </div>
       </div>
 
       <section className="upcoming-bills">
@@ -64,11 +79,11 @@ const PayBills = () => {
           <div key={i} className="bill-item">
             <div className="bill-icon">
               {bill.category === 'Electricity' ? (
-                <img src={lightningSvg} alt="" width="20" height="20" />
+                <img src={electricitySvg} alt="" width="20" height="20" />
               ) : bill.category === 'Airtime' ? (
-                '📱'
+                <img src={airtimeSvg} alt="" width="34" height="34" />
               ) : (
-                '📺'
+                <img src={subscriptionSvg} alt="" width="20" height="20" />
               )}
             </div>
             <div className="bill-info">

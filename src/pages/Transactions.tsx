@@ -1,21 +1,25 @@
 import { useState, useEffect } from 'react';
 import './Transactions.css';
 import lightningSvg from '../assets/icons/lightning.svg';
+import transferSvg from '../assets/icons/transfer.svg';
 import { transactionService } from '../services';
 import type { Transaction } from '../types';
 
 const filters = ['All', 'Income', 'Expense', 'Transfer', 'Bills', 'Airtime'];
 
-const typeIcon: Record<string, string> = {
-  transfer: '↗',
-  receive: '↙',
-  bills: '⚡',
-  airtime: '📱',
-};
-
 const getTxIcon = (type: string) => {
-  if (type === 'bills') return <img src={lightningSvg} alt="" width="16" height="16" />;
-  return typeIcon[type] || '💳';
+  switch (type) {
+    case 'bills':
+      return <img src={lightningSvg} alt="" width="16" height="16" />;
+    case 'transfer':
+      return <img src={transferSvg} alt="" width="16" height="16" />;
+    case 'receive':
+      return '↙';
+    case 'airtime':
+      return '📱';
+    default:
+      return '💳';
+  }
 };
 
 const Transactions = () => {
