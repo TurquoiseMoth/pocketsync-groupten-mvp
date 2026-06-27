@@ -8,6 +8,7 @@ import accountAnalysisSvg from '../assets/icons/account-analysis.svg';
 import accountStatementSvg from '../assets/icons/account-statement.svg';
 import quickPayBillsSvg from '../assets/icons/quick-pay-bills.svg';
 import scanQrSvg from '../assets/icons/scan-qr.svg';
+import transferSvg from '../assets/icons/transfer.svg';
 import lightningSvg from '../assets/icons/lightning.svg';
 import { transactionService, dashboardService } from '../services';
 import type { Transaction, SpendingCategory } from '../types';
@@ -35,7 +36,7 @@ const Dashboard = () => {
       case 'bills':
         return <img src={lightningSvg} alt="" width="16" height="16" />;
       case 'transfer':
-        return '↗';
+        return <img src={transferSvg} alt="" width="16" height="16" />;
       case 'receive':
         return '↙';
       default:
@@ -90,8 +91,10 @@ const Dashboard = () => {
             <p>Scan QR code</p>
           </div>
           <div className="action-card">
-            <div className="action-icon">⋯</div>
-            <p>More</p>
+            <div className="action-icon">
+              <img src={transferSvg} alt="" width="24" height="24" />
+            </div>
+            <p>Transfer</p>
           </div>
         </div>
       </section>
