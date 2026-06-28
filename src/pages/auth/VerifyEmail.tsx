@@ -5,18 +5,16 @@ import OtpInput from '../../components/auth/OtpInput';
 import OtpLayout from '../../components/auth/OtpLayout';
 import { authService } from '../../services/authService';
 
-const DEFAULT_RESEND_SECONDS = 30;
+import {
+  DEFAULT_RESEND_SECONDS,
+  formatCountdown,
+} from '../../lib/otpUtils';
 
 interface VerifyEmailState {
   email?: string;
   message?: string;
   devOtp?: string;
   resendAvailableIn?: number;
-}
-
-function formatCountdown(seconds: number): string {
-  const padded = Math.max(0, seconds).toString().padStart(2, '0');
-  return `00.${padded}`;
 }
 
 export default function VerifyEmail() {
