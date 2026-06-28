@@ -3,7 +3,7 @@ services:
     name: pocketsync-api
     runtime: node
     rootDir: pocketsync-backend
-    buildCommand: yarn install && yarn build
+    buildCommand: yarn install --production=false && yarn build
     startCommand: yarn start
     healthCheckPath: /health
     envVars:
