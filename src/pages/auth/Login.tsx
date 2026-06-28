@@ -1,4 +1,4 @@
-import { type SubmitEvent, useState } from 'react';
+import { type FormEvent, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { ApiError } from '../../api/errors';
 import AuthLayout, { AuthDangerLink, AuthLink } from '../../components/auth/AuthLayout';
@@ -20,7 +20,7 @@ export default function Login() {
 
   const from = (location.state as { from?: { pathname: string } } | null)?.from?.pathname;
 
-  async function handleSubmit(event: SubmitEvent) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setError('');
     setLoading(true);

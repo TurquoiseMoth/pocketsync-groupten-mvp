@@ -1,4 +1,4 @@
-import { type SubmitEvent, useState } from 'react';
+import { type FormEvent, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ApiError } from '../../api/errors';
 import AuthLayout, { AuthLink } from '../../components/auth/AuthLayout';
@@ -29,7 +29,7 @@ export default function Register() {
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
 
-  async function handleSubmit(event: SubmitEvent) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setError('');
     setLoading(true);
