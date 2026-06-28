@@ -8,7 +8,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "start": "cd pocketsync-backend && yarn start"
+    "start": "node pocketsync-backend/dist/app.js"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.12.0",
