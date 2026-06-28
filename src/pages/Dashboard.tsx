@@ -18,7 +18,6 @@ import accountAnalysisSvg from '../assets/icons/account-analysis.svg';
 import accountStatementSvg from '../assets/icons/account-statement.svg';
 import quickPayBillsSvg from '../assets/icons/quick-pay-bills.svg';
 import scanQrSvg from '../assets/icons/scan-qr.svg';
-import transferSvg from '../assets/icons/transfer.svg';
 import lightningSvg from '../assets/icons/lightning.svg';
 import phoneSvg from '../assets/icons/phone.svg';
 

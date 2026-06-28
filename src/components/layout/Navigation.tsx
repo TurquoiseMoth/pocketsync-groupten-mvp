@@ -1,4 +1,3 @@
-import { useState, useRef, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import './Navigation.css';
 import logoSvg from '../../assets/icons/logo.svg';
@@ -10,34 +9,7 @@ import analyticsSvg from '../../assets/icons/analytics.svg';
 import payBillsSvg from '../../assets/icons/pay-bills.svg';
 import helpSupportSvg from '../../assets/icons/help-support.svg';
 import settingsSvg from '../../assets/icons/settings.svg';
-import sidebarBgSvg from '../../assets/icons/sidebar-bg.svg';
-
-const NAV_LINKS = [
-  { to: '/', end: true, icon: dashboardSvg, label: 'Dashboard' },
-  { to: '/link-accounts', icon: linkAccountsSvg, label: 'Link Accounts' },
-  { to: '/transactions', icon: transactionsSvg, label: 'Transactions' },
-  { to: '/analytics', icon: analyticsSvg, label: 'Analytics' },
-  { to: '/pay-bills', icon: payBillsSvg, label: 'Pay Bills' },
-  { to: '/help-support', icon: helpSupportSvg, label: 'Help and support' },
-  { to: '/settings', icon: settingsSvg, label: 'Settings' },
-];
-
 const Navigation = () => {
-  const [drawerOpen, setDrawerOpen] = useState(false);
-  const drawerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (!drawerOpen) return;
-    const handleClickOutside = (e: MouseEvent) => {
-      if (drawerRef.current && !drawerRef.current.contains(e.target as Node)) {
-        setDrawerOpen(false);
-      }
-    };
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, [drawerOpen]);
-
-  const closeDrawer = () => setDrawerOpen(false);
 
   return (
     <nav className="navigation">
