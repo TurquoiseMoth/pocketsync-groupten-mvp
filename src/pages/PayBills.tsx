@@ -257,7 +257,7 @@ const PayBills = () => {
               >
                 {accounts.map((account) => (
                   <option key={account.id} value={account.id}>
-                    {account.bankName} ({account.maskAccount}) — {formatNgn(account.balance)}
+                    {account.bankName} ({account.maskAccount}) · {formatNgn(account.balance)}
                   </option>
                 ))}
               </select>

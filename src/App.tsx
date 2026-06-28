@@ -10,12 +10,12 @@ import VerifyEmail from './pages/auth/VerifyEmail';
 import ForgotPassword from './pages/auth/ForgotPassword';
 import ResetPassword from './pages/auth/ResetPassword';
 import Onboarding from './pages/onboarding/Onboarding';
-
-const Dashboard = lazy(() => import('./pages/Dashboard'));
+import Dashboard from './pages/Dashboard';
 const LinkAccounts = lazy(() => import('./pages/LinkAccounts'));
 const Transactions = lazy(() => import('./pages/Transactions'));
 const Analytics = lazy(() => import('./pages/Analytics'));
 const PayBills = lazy(() => import('./pages/PayBills'));
+const Transfer = lazy(() => import('./pages/Transfer'));
 const HelpSupport = lazy(() => import('./pages/HelpSupport'));
 const Settings = lazy(() => import('./pages/Settings'));
 
@@ -38,10 +38,11 @@ function App() {
 
           <Route element={<ProtectedRoute requireOnboardingComplete />}>
             <Route path="/" element={<Layout />}>
-              <Route index element={<Suspense fallback={null}><Dashboard /></Suspense>} />
+              <Route index element={<Dashboard />} />
               <Route path="link-accounts" element={<Suspense fallback={null}><LinkAccounts /></Suspense>} />
               <Route path="transactions" element={<Suspense fallback={null}><Transactions /></Suspense>} />
               <Route path="analytics" element={<Suspense fallback={null}><Analytics /></Suspense>} />
+              <Route path="transfer" element={<Suspense fallback={null}><Transfer /></Suspense>} />
               <Route path="pay-bills" element={<Suspense fallback={null}><PayBills /></Suspense>} />
               <Route path="help-support" element={<Suspense fallback={null}><HelpSupport /></Suspense>} />
               <Route path="settings" element={<Suspense fallback={null}><Settings /></Suspense>} />
