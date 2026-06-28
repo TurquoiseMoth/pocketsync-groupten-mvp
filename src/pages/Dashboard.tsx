@@ -220,16 +220,18 @@ const Dashboard = () => {
   }, []);
 
   useEffect(() => {
-    loadSummary();
+    queueMicrotask(() => loadSummary());
   }, [loadSummary]);
 
   useEffect(() => {
-    if (!summary) {
-      setRecommendation(null);
-      return;
-    }
+    queueMicrotask(() => {
+      if (!summary) {
+        setRecommendation(null);
+        return;
+      }
 
-    setRecommendation(pickRandomRecommendation(summary.accounts));
+      setRecommendation(pickRandomRecommendation(summary.accounts));
+    });
   }, [summary]);
 
   const accounts = useMemo(
